@@ -7,6 +7,7 @@ const conn = new Sequelize(
   {
     host: process.env.host,
     dialect: process.env.dialect,
+    port: process.env.port
   }
 );
 
