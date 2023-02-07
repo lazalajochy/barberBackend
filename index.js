@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import conn from './conn/conn.js';
 import router from './routes/routes.js';
+import "dotenv/config";
 
 const app = express();
 app.use(express.json());
@@ -18,7 +19,8 @@ try {
 
 }
 
-const PORT = process.env.PORT || 4000
-app.listen(PORT, () => {
-    console.log(`server is running on port ${PORT}`)
+const port = process.env.PORT || 4000
+
+app.listen(port, () => {
+    console.log(`server is running on port ${port}`)
 })
