@@ -10,5 +10,5 @@ const conn = new Sequelize(
     port: process.env.port
   }
 );
-
+//db_port
 export default conn;
