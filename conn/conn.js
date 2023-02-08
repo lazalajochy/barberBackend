@@ -7,8 +7,8 @@ const conn = new Sequelize(
   {
     host: process.env.db_host,
     dialect:"mysql",
-    port: process.env.port
+    port: process.env.db_port
   }
 );
-//db_port
+
 export default conn;
