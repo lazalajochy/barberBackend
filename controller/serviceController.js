@@ -65,3 +65,17 @@ export const deleteService = async (req, res) => {
         res.json(error)
     }
 }
+
+
+export const updateService = async(req, res) => {
+    try {
+        await Service.update(req.body, {
+            where:{
+                id: req.params.id
+            }
+        })
+        res.json("Updated done!!")
+    } catch (error) {
+        
+    }
+}
