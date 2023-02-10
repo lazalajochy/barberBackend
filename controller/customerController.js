@@ -26,3 +26,18 @@ export const getCustomerService = async (req, res) => {
         
     }
 }
+
+
+export const deleteCustomer = async(req, res) => {
+    try {
+        await Customer.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.json("Customer has been deleted!")
+    } catch (error) {
+        console.log(error)
+        
+    }
+}
