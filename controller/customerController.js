@@ -1,7 +1,7 @@
 import Customer from "../models/customerModel.js";
 
 
-export const addCustomerSerService = async(req, res) => {
+export const addCustomerService = async(req, res) => {
     const {serviceName, servicePrice, serviceDescription, customerName} = req.body;
     try {
         await Customer.create({

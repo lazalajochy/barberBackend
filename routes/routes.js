@@ -1,6 +1,6 @@
 import express from 'express'
 import { addService, getServices, editService, getService, deleteService } from "../controller/serviceController.js";
-import {addCustomerSerService, getCustomerService, deleteCustomer} from "../controller/customerController.js"
+import {addCustomerService, getCustomerService, deleteCustomer} from "../controller/customerController.js"
 import { getComments, addComment } from '../controller/commentController.js';
     
 const router = express.Router();
@@ -10,7 +10,7 @@ router.get('/',getServices)
 router.put('/editService/:id', editService)
 router.get('/getService/:id', getService)
 router.delete('/deleteService/:id', deleteService)
-router.post('/addCustomerSerService', addCustomerSerService)
+router.post('/addCustomerService', addCustomerService)
 router.get('/getCustomerService', getCustomerService)
 router.get('/getComments', getComments);
 router.post('/addComment', addComment);
